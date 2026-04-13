@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <meta name="description" content="Contact page for final test">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="contact">
+  <meta property="og:description" content="Contact page for final test">
+  
+  
+  <link rel="stylesheet" href="../css/global.css">
+  <style></style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"contact","url":"https://seotest.example.com/contact","description":"Contact page for final test"}</script>
+  <script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/admin*","/auth*","/login*","/signup*","/preview*","/api/*","/_*","/wp-admin*","/dashboard*"]}},{"not":{"selector_matches":"[download], [href^='mailto:'], [href^='tel:'], [href^='#'], [href$='.pdf'], [href$='.zip'], [href$='.png'], [href$='.jpg'], [href$='.svg'], [data-no-prefetch]"}}]},"eagerness":"moderate"}],"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/admin*","/auth*","/login*","/signup*","/preview*","/api/*","/_*","/wp-admin*","/dashboard*"]}},{"not":{"selector_matches":"[download], [href^='mailto:'], [href^='tel:'], [href^='#'], [href$='.pdf'], [href$='.zip'], [href$='.png'], [href$='.jpg'], [href$='.svg'], [data-no-prefetch]"}}]},"eagerness":"conservative"}]}</script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="/">SEO Test Brand</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/florida/">Florida</a>
+      <a href="/blog/free-government-phone-guide/">Guide</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <h1>Contact</h1>
+  <p>This is a contact test page.</p>
+</main>
+<footer>
+  <div class="container">
+    <p>© 2026 SEO Test Brand</p>
+  </div>
+</footer>
+<script></script>
+<script data-instant-nav>
+(function(){
+  if(window.HTMLScriptElement&&HTMLScriptElement.supports&&HTMLScriptElement.supports('speculationrules'))return;
+  var nav=navigator,conn=nav.connection||nav.mozConnection||nav.webkitConnection;
+  if(conn){if(conn.saveData)return;if(conn.effectiveType&&/2g|slow-2g/.test(conn.effectiveType))return;}
+  if(!nav.onLine&&typeof nav.onLine==='boolean')return;
+  var seen={},count=0,MAX=6,DELAY=200;
+  var EXCL=["/admin","/auth","/login","/signup","/preview","/api/","/_","/wp-admin","/dashboard"];
+  var EXT_RE=/\.(pdf|zip|png|jpg|jpeg|gif|svg|webp|mp4|mp3|doc|xls|ppt|exe|dmg)$/i;
+  function ok(a){if(!a||!a.href)return false;try{var u=new URL(a.href,location.origin)}catch(e){return false}if(u.origin!==location.origin)return false;if(u.pathname===location.pathname)return false;if(a.hasAttribute('download')||a.hasAttribute('data-no-prefetch'))return false;if(/^(mailto|tel|javascript):/.test(a.href))return false;if(EXT_RE.test(u.pathname))return false;for(var i=0;i<EXCL.length;i++){if(u.pathname.indexOf(EXCL[i])===0)return false}return true}
+  function pf(url){if(seen[url]||count>=MAX)return;seen[url]=1;count++;var l=document.createElement('link');l.rel='prefetch';l.href=url;l.as='document';document.head.appendChild(l)}
+  var ht;document.addEventListener('pointerenter',function(e){var a=e.target.closest&&e.target.closest('a');if(!ok(a))return;ht=setTimeout(function(){pf(a.href)},DELAY)},true);document.addEventListener('pointerleave',function(e){if(ht){clearTimeout(ht);ht=null}},true);
+  document.addEventListener('touchstart',function(e){var a=e.target.closest&&e.target.closest('a');if(ok(a))pf(a.href)},{passive:true,capture:true});
+  
+})();
+</script>
+</body>
+</html>
